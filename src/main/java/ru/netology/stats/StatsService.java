@@ -40,22 +40,20 @@ public class StatsService {
     }
 
     public long mouthWithMoreThanAverage(long[] items){
-        long average = average(items);
-
-        int mouthCount = 0;
-        for(long item : items){
-            mouthCount++;
-            if(item > average){
-                mouthCount++;
+        long month = 0;
+        long averageSales = average(items);
+        for (long item : items) {
+            if (item > averageSales) {
+                month++;
             }
         }
-        return mouthCount;
+        return month;
     }
 
     public long mouthWithLessAverage (long[] items){
-        long average = average(items);
 
         int mouthCount = 0;
+        long average = average(items);
         for(long item : items){
             mouthCount++;
             if(item < average){

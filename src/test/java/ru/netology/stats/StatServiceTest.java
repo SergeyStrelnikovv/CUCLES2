@@ -55,9 +55,9 @@ public class StatServiceTest {
     public void shouldReturnMonthsWithMore(){
         StatsService service = new StatsService();
 
-        long[] items = {12,13,1,5,6,};
+        long[] items = {12,13,8,5,5};
 
-        long expected = 7;
+        long expected = 2;
         long actual = service.mouthWithMoreThanAverage(items);
 
         Assertions.assertEquals(expected, actual);
